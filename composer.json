@@ -9,5 +9,15 @@
       "email": "info@thomaszwirner.de"
     }
   ],
-  "minimum-stability": "dev"
+  "minimum-stability": "dev",
+  "scripts": {
+    "post-update-cmd": [
+      "npm install",
+      "npm run start"
+    ],
+    "post-install-cmd": [
+      "npm install",
+      "npm run start"
+    ]
+  }
 }
