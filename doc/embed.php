@@ -9,6 +9,11 @@ function custom_dialog_embed(): void {
     $path = trailingslashit(plugin_dir_path(__FILE__)).'vendor/threadi/wp-easy-dialog/';
     $url = trailingslashit(plugin_dir_url(__FILE__)).'vendor/threadi/wp-easy-dialog/';
 
+    // bail if path does not exist.
+    if( !file_exists($path) ) {
+        return;
+    }
+
     // embed the dialog-components JS-script.
     $script_asset_path = $path . 'build/index.asset.php';
     $script_asset      = require( $script_asset_path );
