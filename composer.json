@@ -10,6 +10,9 @@
     }
   ],
   "minimum-stability": "dev",
+  "extra": {
+    "class": "thread\\WpEasyDialog"
+  },
   "scripts": {
     "post-update-cmd": [
       "npm install",
