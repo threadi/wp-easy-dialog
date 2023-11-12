@@ -1,7 +1,7 @@
 {
   "name": "threadi/wp-easy-dialog",
   "description": "Provides a simple react-driven dialog-modal for WordPress-backend.",
-  "type": "composer-plugin",
+  "type": "library",
   "license": "GPL-3.0-or-later",
   "authors": [
     {
@@ -10,27 +10,4 @@
     }
   ],
   "minimum-stability": "dev",
-  "require": {
-    "composer-plugin-api": "^2.0"
-  },
-  "require-dev": {
-    "composer/composer": "^2.0"
-  },
-  "extra": {
-    "class": "thread\\WpEasyDialog"
-  },
-  "scripts": {
-    "post-update-cmd": [
-      "npm install",
-      "npm run start"
-    ],
-    "post-install-cmd": [
-      "npm install",
-      "npm run start"
-    ],
-    "post-package-install": [
-      "npm install",
-      "npm run start"
-    ]
-  }
 }

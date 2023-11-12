@@ -2,12 +2,13 @@
 
 ## Requirements
 
+* composer to install this package.
 * npm to compile the scripts.
 * WordPress-plugin, theme or Code Snippet-plugin to embed them in your project.
 
 ## Installation
 
-1. Place the files of this directory in your project.
+1. ``composer require threadi/wp-easy-dialog``
 2. Run ``npm i`` to install dependencies.
 3. Run ``npm run start`` to compile the scripts.
 4. Add the codes from `doc/embed.php` to your WordPress-projekt (plugin or theme).
