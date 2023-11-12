@@ -18,6 +18,10 @@
     "post-install-cmd": [
       "npm install",
       "npm run start"
+    ],
+    "post-package-install": [
+      "npm install",
+      "npm run start"
     ]
   }
 }
