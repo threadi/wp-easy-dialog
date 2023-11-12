@@ -9,9 +9,10 @@
 ## Installation
 
 1. ``composer require threadi/wp-easy-dialog``
-2. Run ``npm i`` to install dependencies.
-3. Run ``npm run start`` to compile the scripts.
-4. Add the codes from `doc/embed.php` to your WordPress-projekt (plugin or theme).
+2. Switch to ``vendor/thread/wp-easy-dialog``
+3. Run ``npm i`` to install dependencies.
+4. Run ``npm run build`` to compile the scripts.
+5. Add the codes from `doc/embed.php` to your WordPress-projekt (plugin or theme).
 
 ## Configuration
 

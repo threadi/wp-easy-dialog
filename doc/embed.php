@@ -5,7 +5,7 @@
  */
 add_action( 'admin_enqueue_scripts', 'custom_dialog_embed', PHP_INT_MAX );
 function custom_dialog_embed(): void {
-	$path = __FILE__;
+    $path = __DIR__.'/vendor/threadi/wp-easy-dialog/';
 
 	// embed the dialog-component.
 	$script_asset_path = $path . 'build/index.asset.php';
