@@ -117,9 +117,9 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	});
 
 	// on each element with the class "wp-easy-dialog".
-	let simplify_links = document.getElementsByClassName('wp-easy-dialog');
-	for( let i=0;i<simplify_links.length;i++ ) {
-		simplify_links[i].onclick = function(e) {
+	let dialog_links = document.getElementsByClassName('wp-easy-dialog');
+	for( let i=0;i<dialog_links.length;i++ ) {
+		dialog_links[i].onclick = function(e) {
 			e.preventDefault();
 			document.body.dispatchEvent(new CustomEvent("wp-easy-dialog", { detail: JSON.parse(this.dataset.dialog) }));
 		};
