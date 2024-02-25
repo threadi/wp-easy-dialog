@@ -72,6 +72,7 @@ class Easy_Dialog extends React.Component {
 						className="wp-progressbar"
 					>
 						<progress max="100" id={args.dialog.progressbar.id} value={args.dialog.progressbar.progress}>&nbsp;</progress>
+						{args.dialog.progressbar.label_id && <p id={args.dialog.progressbar.label_id}></p>}
 					</div>
 				)}
 				{args.dialog.buttons && args.dialog.buttons.map(function(button) {
