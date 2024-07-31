@@ -77,7 +77,7 @@ class Easy_Dialog extends React.Component {
 				)}
 				{args.dialog.buttons && args.dialog.buttons.map(function(button) {
 						return (
-							<Button key={button.text} variant={button.variant} onClick={ () => eval(button.action) }>
+							<Button key={button.text} className={button.className} variant={button.variant} onClick={ () => eval(button.action) } href={button.href}>
 								{button.text}
 							</Button>
 						)
