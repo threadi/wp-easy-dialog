@@ -5,7 +5,8 @@
  */
 import './style.scss';
 import { Button, Modal } from '@wordpress/components';
-import React, {useState} from 'react'
+import React from 'react'
+import { render } from 'react-dom';
 
 /**
  * Define the easy dialog modal for WordPress.
@@ -108,10 +109,16 @@ function add_easy_dialog( dialog ) {
 			root.id = 'wp-easy-dialog-root';
 			top.document.body.append(root);
 		}
-		wp_easy_dialog = ReactDOM.createRoot(top.document.getElementById('wp-easy-dialog-root'));
-		wp_easy_dialog.render(
-			<Easy_Dialog dialog={dialog}/>
-		);
+		if( ReactDOM.createRoot === undefined ) {
+			const container = top.document.getElementById('wp-easy-dialog-root');
+			render(<Easy_Dialog dialog={dialog}/>, container);
+		}
+		else {
+			wp_easy_dialog = ReactDOM.createRoot(top.document.getElementById('wp-easy-dialog-root'));
+			wp_easy_dialog.render(
+				<Easy_Dialog dialog={dialog}/>
+			);
+		}
 	}
 }
 

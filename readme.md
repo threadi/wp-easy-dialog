@@ -94,6 +94,10 @@ body.wp-easy-dialog-on-body.wp-core-ui .components-modal__frame.wp-easy-dialog {
 
 ## FAQ
 
+### Which WordPress version is required?
+
+Lowest tested version ist WordPress 5.9.
+
 ### How to simply close the dialog via link?
 
 Use this JS-function: `closeDialog();`
