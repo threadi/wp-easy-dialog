@@ -94,6 +94,10 @@ body.wp-easy-dialog-on-body.wp-core-ui .components-modal__frame.wp-easy-dialog {
 
 ## FAQ
 
+### How to simply close the dialog via link?
+
+Use this JS-function: `closeDialog();`
+
 ### Is it possible to create multiple dialogs on one screen?
 
 No, this is not possible.
