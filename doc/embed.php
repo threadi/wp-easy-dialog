@@ -14,8 +14,15 @@ function custom_dialog_embed(): void {
         return;
     }
 
-    // embed the dialog-components JS-script.
+    // get assets path.
     $script_asset_path = $path . 'build/index.asset.php';
+
+    // bail if assets does not exist.
+    if( !file_exists($script_asset_path) ) {
+        return;
+    }
+
+    // embed the dialog-components JS-script.
     $script_asset      = require( $script_asset_path );
     wp_enqueue_script(
         'wp-easy-dialog',
