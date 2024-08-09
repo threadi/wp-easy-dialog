@@ -37,7 +37,12 @@ class Easy_Dialog extends React.Component {
 		 * Define close action.
 		 */
 		const closeDialog = () => {
-			wp_easy_dialog.unmount();
+			if( ReactDOM.createRoot === undefined ) {
+				unmountComponentAtNode(top.document.getElementById('wp-easy-dialog-root'))
+			}
+			else {
+				wp_easy_dialog.unmount();
+			}
 			wp_easy_dialog = null;
 		};
 
@@ -101,7 +106,12 @@ let wp_easy_dialog = null;
 function add_easy_dialog( dialog ) {
 	if( dialog ) {
 		if ( wp_easy_dialog ) {
-			wp_easy_dialog.unmount();
+			if( ReactDOM.createRoot === undefined ) {
+				unmountComponentAtNode(top.document.getElementById('wp-easy-dialog-root'))
+			}
+			else {
+				wp_easy_dialog.unmount();
+			}
 			wp_easy_dialog = null;
 		}
 		if( ! top.document.getElementById('wp-easy-dialog-root') ) {
@@ -111,7 +121,7 @@ function add_easy_dialog( dialog ) {
 		}
 		if( ReactDOM.createRoot === undefined ) {
 			const container = top.document.getElementById('wp-easy-dialog-root');
-			render(<Easy_Dialog dialog={dialog}/>, container);
+			wp_easy_dialog = render(<Easy_Dialog dialog={dialog}/>, container);
 		}
 		else {
 			wp_easy_dialog = ReactDOM.createRoot(top.document.getElementById('wp-easy-dialog-root'));
@@ -149,7 +159,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	});
 
 	// add listener for reinitialization.
-	document.body.addEventListener('wp-easy-dialog-reinit', function(attr) {
+	document.body.addEventListener('wp-easy-dialog-reinit', function() {
 		easy_dialog_init();
 	});
 
