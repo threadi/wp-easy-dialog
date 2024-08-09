@@ -6,7 +6,7 @@
 import './style.scss';
 import { Button, Modal } from '@wordpress/components';
 import React from 'react'
-import { render } from 'react-dom';
+import { render, unmountComponentAtNode } from 'react-dom';
 
 /**
  * Define the easy dialog modal for WordPress.
